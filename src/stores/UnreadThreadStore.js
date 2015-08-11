@@ -1,6 +1,7 @@
 import alt from "../alt.js";
 import ChatServerActionCreators from "../actions/ChatServerActionCreators.js";
 import ChatThreadActionCreators from "../actions/ChatThreadActionCreators.js";
+import MessageStore from "../stores/MessageStore.js";
 import ThreadStore from "../stores/ThreadStore.js";
 
 class UnreadThreadStore {
