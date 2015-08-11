@@ -21,7 +21,7 @@ class UnreadThreadStore {
   wait() {
     this.waitFor([
       ThreadStore.dispatchToken,
-      // MessageStore.dispatchToken
+      MessageStore.dispatchToken
     ]);
   }
 

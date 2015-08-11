@@ -1,9 +1,12 @@
 import alt from "../alt.js";
+import ChatServerActionCreators from "../actions/ChatServerActionCreators.js";
+import ChatThreadActionCreators from "../actions/ChatThreadActionCreators.js";
+import ChatMessageUtils from "../utils/ChatMessageUtils.js";
 
 class ThreadStore {
   constructor() {
-    // TODO: ActionCreators をつくる
-    this.bindActions("ActionCreators");
+    this.bindActions(ChatServerActionCreators);
+    this.bindActions(ChatThreadActionCreators);
 
     this.currentID = null;
     this.threads = {};
@@ -28,7 +31,7 @@ class ThreadStore {
       this.threads[threadID] = {
         id: threadID,
         name: message.threadName,
-        lastMessage: "utils not implemented..."
+        lastMessage: ChatMessageUtils.convertRawMessage(message, this.currentID)
       };
     });
 

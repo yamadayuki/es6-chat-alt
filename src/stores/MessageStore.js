@@ -1,14 +1,14 @@
 import alt from "../alt.js";
-// import ChatMessageActionCreators from "../actions/ChatMessageActionCreators.js";
+import ChatMessageActionCreators from "../actions/ChatMessageActionCreators.js";
 import ChatServerActionCreators from "../actions/ChatServerActionCreators.js";
 import ChatThreadActionCreators from "../actions/ChatThreadActionCreators.js";
 import ThreadStore from "./ThreadStore.js";
-// import ChatMessageUtils from "../utils/ChatMessageUtils.js";
-// import ChatMessageDataUtils from "../utils/ChatMessageDataUtils.js";
+import ChatMessageUtils from "../utils/ChatMessageUtils.js";
+import ChatMessageDataUtils from "../utils/ChatMessageDataUtils.js";
 
 class MessageStore {
   constructor() {
-    // this.bindActions(ChatMessageActionCreators);
+    this.bindActions(ChatMessageActionCreators);
     this.bindActions(ChatServerActionCreators);
     this.bindActions(ChatThreadActionCreators);
 
