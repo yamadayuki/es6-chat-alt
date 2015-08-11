@@ -1,6 +1,6 @@
 import React from "react";
-import App from "./components/App.jsx";
+import ChatApp from "./components/ChatApp.jsx";
 
 React.render(
-  <App></App>, document.getElementById("react")
+  <ChatApp></ChatApp>, document.getElementById("react")
 );
