@@ -77,7 +77,7 @@ class ThreadStore {
   }
 
   static getCurrent() {
-    let { threads, currentID } = this.getState();
+    var { threads, currentID } = this.getState();
     return threads[currentID];
   }
 }

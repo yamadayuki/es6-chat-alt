@@ -1,4 +1,5 @@
 import React from "react";
+import ThreadListItem from "../components/ThreadListItem.jsx";
 import MessageStore from "../stores/MessageStore.js";
 import ThreadStore from "../stores/ThreadStore.js";
 import UnreadThreadStore from "../stores/UnreadThreadStore.js";
@@ -27,7 +28,11 @@ let ThreadSection = React.createClass({
   render() {
     var threadListItems = this.state.threads.map((thread) => {
       return (
-        <li>messages</li>
+        <ThreadListItem
+          key={thread.id}
+          thread={thread}
+          currentThreadID={this.state.currentThreadID}
+        ></ThreadListItem>
       );
     });
 
