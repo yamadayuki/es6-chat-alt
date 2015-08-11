@@ -1,4 +1,5 @@
 import React from "react";
+import ThreadSection from "./ThreadSection.jsx";
 
 export default class ChatApp extends React.Component {
   constructor(props) {
@@ -7,7 +8,9 @@ export default class ChatApp extends React.Component {
 
   render() {
     return (
-      <h1>ChatApp</h1>
+      <div className="chatapp">
+        <ThreadSection></ThreadSection>
+      </div>
     );
   }
 }
