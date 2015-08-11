@@ -1,4 +1,5 @@
 import React from "react";
+import MessageStore from "../stores/MessageStore.js";
 import ThreadStore from "../stores/ThreadStore.js";
 import UnreadThreadStore from "../stores/UnreadThreadStore.js";
 import ListenerMixin from "../mixins/ListenerMixin.js";
@@ -24,13 +25,21 @@ let ThreadSection = React.createClass({
   },
 
   render() {
+    var threadListItems = this.state.threads.map((thread) => {
+      return (
+        <li>messages</li>
+      );
+    });
+
     var unread =
       this.state.unreadCount === 0 ? null : <span>Unread threads: {this.state.unreadCount}</span>;
 
     return (
       <div className="thread-section">
         <div className="thread-count">{unread}</div>
-        <div className="thread-list"><p>list</p></div>
+        <ul className="thread-list">
+          {threadListItems}
+        </ul>
       </div>
     );
   },
