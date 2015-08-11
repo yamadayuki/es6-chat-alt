@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "alt": "^0.17.1",
     "react": "^0.13.3"
   },
   "devDependencies": {
