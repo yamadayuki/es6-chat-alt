@@ -2,6 +2,7 @@ import alt from "../alt.js";
 
 class ThreadStore {
   constructor() {
+    // TODO: ActionCreators をつくる
     this.bindActions("ActionCreators");
 
     this.currentID = null;
@@ -78,4 +79,4 @@ class ThreadStore {
   }
 }
 
-module.exports = alt.createStore(ThreadStore, 'ThreadStore');
+module.exports = alt.createStore(ThreadStore, "ThreadStore");
