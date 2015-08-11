@@ -1,10 +1,12 @@
 import alt from "../alt.js";
+import ChatServerActionCreators from "../actions/ChatServerActionCreators.js";
+import ChatThreadActionCreators from "../actions/ChatThreadActionCreators.js";
 import ThreadStore from "../stores/ThreadStore.js";
 
 class UnreadThreadStore {
   constructor() {
-    // TODO: ActionCreators をつくる
-    this.bindActions("ActionCreators");
+    this.bindActions(ChatServerActionCreators);
+    this.bindActions(ChatThreadActionCreators);
   }
 
   onClickThread(threadID) {
