@@ -1,7 +1,7 @@
 import React from "react";
 import ChatThreadActionCreators from "../actions/ChatThreadActionCreators.js";
 
-var ThreadListItem = React.createClass({
+let ThreadListItem = React.createClass({
   propTypes: {
     thread: React.PropTypes.object,
     currentThreadID: React.PropTypes.string
